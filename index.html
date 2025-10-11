@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<script src="script.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Nos Casamos!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="names">María & Francisco</h1>
+      <p class="date">27 de diciembre de 2025</p>
+    </header>
+
+    <main>
+      <div class="invitation">
+        <p>Con la bendición de Dios y el amor de nuestras familias,</p>
+        <p class="highlight">¡Nos casamos!</p>
+        <p>Nos complace invitarte a celebrar este día tan especial con nosotros.</p>
+      </div>
+
+      <div class="details">
+        <h2>Ceremonia y Recepción</h2>
+        <p>
+          📍 Eventos Palapa de May<br>
+          🕒 7:00 PM<br>
+          Calle Antonio Soto y Gama
+        </p>
+      </div>
+
+      <div class="rsvp">
+        <h2>¿Asistirás a nuestra boda?</h2>
+        <form id="rsvpForm" action="https://formspree.io/f/meorrprj" method="POST">
+          <label for="nombre">
+            <h3>Nombre:</h3>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" autocomplete="name" />
+          </label>
+
+          <label for="asistencia">
+            <h3>Asistencia:</h3>
+            <select id="asistencia" name="asistencia" required>
+              <option value="">-- Elige --</option>
+              <option value="Sí, ¡con gusto asistiré! ✨">Sí, ¡con gusto asistiré! ✨</option>
+              <option value="No podré asistir 💔">No podré asistir 💔</option>
+            </select>
+          </label>
+
+          <label for="mensaje">
+            <h3>Mensaje (opcional):</h3>
+            <textarea id="mensaje" name="mensaje" placeholder="¡Felicitaciones! / No podré ir por..."></textarea>
+          </label>
+
+          <button type="submit">Enviar Respuesta</button>
+        </form>
+        <p id="formResponse"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Esperamos verte en nuestro gran día ❤️</p>
+    </footer>
+  </div>
+
+  <!-- Contenedor de brillitos (DEBE estar al final del body) -->
+  <div id="sparkles-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
