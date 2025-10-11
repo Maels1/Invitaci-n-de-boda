@@ -1,4 +1,5 @@
 /* === RESET Y VARIABLES === */
+/*
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@
 }
 
 /* === BODY Y FONDO === */
-body {
+/*body {
   font-family: var(--font-primary);
   background: url('https://www.tuexperto.com/wp-content/uploads/2019/03/invitaciones-boda-1200x640.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -26,7 +27,7 @@ body {
 }
 
 /* === CONTENEDOR PRINCIPAL === */
-.container {
+/*.container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,7 +40,7 @@ body {
 }
 
 /* === ENCABEZADO === */
-.names {
+/*.names {
   font-family: var(--font-script);
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -52,7 +53,7 @@ body {
 }
 
 /* === INVITACIÓN === */
-.invitation p {
+/*.invitation p {
   margin: 0.8rem 0;
   font-size: 1.2rem;
 }
@@ -65,7 +66,7 @@ body {
 }
 
 /* === DETALLES === */
-.details h2 {
+/*.details h2 {
   margin-top: 2rem;
   font-size: 1.8rem;
   color: var(--color-highlight);
@@ -75,10 +76,10 @@ body {
   margin: 0.8rem auto;
   max-width: 500px;
   font-size: 1.1rem;
-}
+}*/
 
 /* === FORMULARIO RSVP === */
-.rsvp h2 {
+/*.rsvp h2 {
   margin: 2.5rem 0 1.5rem;
   font-size: 1.8rem;
 }
@@ -146,14 +147,14 @@ button:focus {
 }
 
 /* === PIE DE PÁGINA === */
-footer {
+/*footer {
   margin-top: 2rem;
   font-style: italic;
   font-size: 1.1rem;
-}
+}*/
 
 /* === RESPONSIVE === */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .container {
     padding: 1.5rem;
   }
@@ -179,9 +180,10 @@ footer {
     max-width: 300px;
     padding: 1rem;
   }
-}
+}*/
 
 /* === BRILLITOS MÁGICOS === */
+/*
 #sparkles-container {
   position: fixed;
   top: 0;
@@ -215,4 +217,17 @@ footer {
   box-shadow:
     0 0 6px 2px rgba(255, 255, 255, 0.9),
     0 0 12px 3px rgba(212, 175, 55, 0.7);
-}
+
+}*/
+// script.js - Diagnóstico
+console.log("✅ Script cargado correctamente");
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("✅ DOM cargado");
+  const container = document.getElementById('sparkles-container');
+  if (container) {
+    console.log("✅ Contenedor de brillitos encontrado");
+    container.innerHTML = '<div class="sparkle" style="position:absolute; top:50%; left:50%; width:20px; height:20px; background:red; border-radius:50%;"></div>';
+  } else {
+    console.error("❌ Contenedor #sparkles-container no encontrado");
+  }
+});
